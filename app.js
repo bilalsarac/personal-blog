@@ -62,22 +62,23 @@ app.get("/compose", function (req, res) {
   res.render("compose");
 });
 
-app.post("/compose", function (req, res) {
-  const post = new Post({
-    title: req.body.postTitle,
-    content: req.body.postBody
-  });
+// app.post("/compose", function (req, res) {
+//   const post = new Post({
+//     title: req.body.postTitle,
+//     content: req.body.postBody
+//   });
 
-  post.save(function (err) {
-    if (!err) {
+//   post.save(function (err) {
+//     if (!err) {
 
-      res.redirect("/");
+//       res.redirect("/");
 
-    }
-  });
+//     }
+//   });
 
 
-});
+// });
+
 
 app.get("/posts/:postId", function (req, res) {
   const requestedPostId = req.params.postId;
